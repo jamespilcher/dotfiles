@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of packages to install
-packages=("i3, i3lock, i3blocks")
+packages=("i3 i3lock i3blocks dunst")
 
 # Function to check if a command is available
 command_exists() {
