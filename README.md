@@ -2,12 +2,22 @@
 
 For a consistency across linux machines.
 
-## Containing
-- i3 window manager config, using: i3, i3lock, i3blocks, dunst
-- .bashrc file for terminal goodies
-
 ## Usage
-
-Run `./linker.sh -r`
-
-
+Clone the repo to home directory
+```
+cd ~ && git clone https://github.com/jamespilcher/dotfiles
+```
+Change directory
+```
+cd ~/dotfiles
+```
+Run [installer.sh](https://github.com/jamespilcher/dotfiles/installer.sh) to install packages and update executable permissions
+```
+./installer.sh
+```
+Run [linker.sh](https://github.com/jamespilcher/dotfiles/installer.sh) to symlink dotfiles to their respective locations
+```
+./linker.sh -r
+```
+***
+_A thanks to [@THasthika_](https://github.com/THasthika) who shared his dotfile setup which served as the foundation._
