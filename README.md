@@ -11,11 +11,11 @@ Change directory
 ```
 cd ~/dotfiles
 ```
-Run [installer.sh](https://github.com/jamespilcher/dotfiles/installer.sh) to install packages and update executable permissions
+Run [installer.sh](https://github.com/jamespilcher/dotfiles/blob/main/installer.sh) to install packages and update executable permissions
 ```
 ./installer.sh
 ```
-Run [linker.sh](https://github.com/jamespilcher/dotfiles/installer.sh) to symlink dotfiles to their respective locations
+Run [linker.sh](https://github.com/jamespilcher/dotfiles/blob/main/linker.sh) to symlink dotfiles to their respective locations
 ```
 ./linker.sh -r
 ```
