@@ -12,10 +12,6 @@
 set $mod Mod1
 set $win Mod4
 
-# set custom command path (ccp)
-set $csp ~/.config/i3/custom_scripts
-
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -39,7 +35,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # james' posture reminder
-exec --no-startup-id $csp/posture_reminder.sh 5 20
+exec --no-startup-id posture_reminder 5 15
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -189,20 +185,14 @@ bindsym $mod+Ctrl+Shift+Right move workspace to output right
 bindsym $mod+Ctrl+Shift+Left  move workspace to output left
 
 # lock screen
-bindsym $win+l exec $csp/lock.sh
+bindsym $win+l exec lock
 
 # open chatgpt using application key
 
-bindsym Menu exec $csp/open_chatgpt.sh
-
-
-# volume control, assumes using pule
-
-bindsym KP_Subtract exec $csp/open_chatgpt.sh 
-bindsym KP_Add exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Menu exec open_chatgpt
 
 # spotify controls
 
-bindsym KP_Enter exec $csp/spotify_control.sh toggle
-bindsym KP_Divide exec $csp/spotify_control.sh previous
-bindsym KP_Multiply exec $csp/spotify_control.sh next
+bindsym KP_Enter exec spotify_control toggle
+bindsym KP_Divide exec $spotify_control previous
+bindsym KP_Multiply exec spotify_control next
