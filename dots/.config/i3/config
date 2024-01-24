@@ -196,3 +196,6 @@ bindsym Menu exec open_chatgpt
 bindsym KP_Enter exec spotify_control toggle
 bindsym KP_Divide exec $spotify_control previous
 bindsym KP_Multiply exec spotify_control next
+
+# screenshot to clipboard
+bindsym $mod+Shift+s exec screenshot_selection
