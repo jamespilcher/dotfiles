@@ -128,6 +128,17 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+# Workspace 9
+exec i3-msg "workspace $ws9; \
+         exec i3-sensible-terminal; \
+         split v; \
+         exec i3-sensible-terminal; \
+         split h; \
+         exec i3-sensible-terminal; \
+         exec i3-sensible-terminal; \
+         focus up; \
+         exec i3-sensible-terminal"
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
