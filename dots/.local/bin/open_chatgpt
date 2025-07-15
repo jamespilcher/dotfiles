@@ -2,9 +2,13 @@
 
 CHATGPT_URL="https://chat.openai.com/"
 
-# Check if Google Chrome is installed
-if command -v google-chrome >/dev/null 2>&1; then
-    google-chrome "$CHATGPT_URL"
+# Try different methods in order of preference
+if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$CHATGPT_URL"
+elif command -v sensible-browser >/dev/null 2>&1; then
+    sensible-browser "$CHATGPT_URL"
+elif [ -n "$BROWSER" ]; then
+    $BROWSER "$CHATGPT_URL"
 else
-    echo "Error: Google Chrome is not installed."
+    echo "Error: No suitable browser opener found."
 fi

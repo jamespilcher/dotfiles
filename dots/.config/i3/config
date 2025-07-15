@@ -54,10 +54,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -128,16 +128,6 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# Workspace 9
-exec i3-msg "workspace $ws9; \
-         exec i3-sensible-terminal; \
-         split v; \
-         exec i3-sensible-terminal; \
-         split h; \
-         exec i3-sensible-terminal; \
-         exec i3-sensible-terminal; \
-         focus up; \
-         exec i3-sensible-terminal"
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -196,7 +186,7 @@ bindsym $mod+Ctrl+Shift+Right move workspace to output right
 bindsym $mod+Ctrl+Shift+Left  move workspace to output left
 
 # lock screen
-bindsym $win+l exec lock
+bindsym $mod+l exec lock
 
 # open chatgpt using application key
 
@@ -210,3 +200,15 @@ bindsym KP_Multiply exec spotify_control next
 
 # screenshot to clipboard
 bindsym $mod+Shift+s exec screenshot_selection
+
+
+# # Workspace 9
+# exec i3-msg "workspace $ws9; \
+#          exec i3-sensible-terminal; \
+#          split v; \
+#          exec i3-sensible-terminal; \
+#          split h; \
+#          exec i3-sensible-terminal; \
+#          exec i3-sensible-terminal; \
+#          focus up; \
+#          exec i3-sensible-terminal"

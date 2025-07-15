@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # List of packages to install
 packages=("i3" "i3lock" "i3blocks" "dunst" "maim" "xclip")
 
@@ -32,4 +34,6 @@ done
 echo "Installation of packages is complete."
 
 # Chmod all files in custom_commands folder to chmod +x
-chmod +x ~/dotfiles/dots/.local/bin/*
+# IMPORTANT!
+# chmod +x $SCRIPT_DIR/dots/.local/bin/*
+chmod -R +x $SCRIPT_DIR/dots/
